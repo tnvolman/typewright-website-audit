@@ -7,8 +7,8 @@
     "name": "Michael McClanahan",
     "email": "hello@typewrightstudio.com"
   },
-  "publisher": "Michael McClanahan",
   "homepage": "https://typewrightstudio.com/audit/",
+  "repository": "https://github.com/tnvolman/typewright-website-audit",
   "license": "MIT",
   "logo": "assets/icon.svg",
   "keywords": [
@@ -18,11 +18,6 @@
     "local-seo",
     "pagespeed",
     "accessibility"
-  ],
-  "tags": [
-    "audit",
-    "website",
-    "small-business"
   ],
   "skills": "./skills/",
   "mcpServers": "./mcp.json"
