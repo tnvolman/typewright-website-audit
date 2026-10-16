@@ -1,0 +1,14 @@
+{
+  "name": "typewright-website-audit",
+  "displayName": "Typewright Website Audit",
+  "version": "0.1.0",
+  "description": "Free website audit for small and local businesses by Typewright Studio, a small web studio in Wilson, NC run by Michael McClanahan. 21 checks on speed (Google PageSpeed), mobile, Google findability, trust and contact, and accessibility basics, each with a cited source. The URL you submit is sent to typewrightstudio.com and to Google PageSpeed Insights. Nothing is stored. Privacy: https://typewrightstudio.com/privacy/ Terms: https://typewrightstudio.com/terms/",
+  "author": {"name": "Michael McClanahan", "email": "hello@typewrightstudio.com"},
+  "publisher": "Michael McClanahan",
+  "homepage": "https://typewrightstudio.com/audit/",
+  "license": "MIT",
+  "keywords": ["website", "audit", "small-business", "local-seo", "pagespeed", "accessibility"],
+  "tags": ["audit", "website", "small-business"],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}
