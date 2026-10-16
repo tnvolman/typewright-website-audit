@@ -13,9 +13,8 @@ The score is always out of 20. A check that couldn't run counts as not passed, a
 ## Configuration
 | env var | default | purpose |
 |---|---|---|
-| `TYPEWRIGHT_AUDIT_ENDPOINT` | preview deployment URL (will become `https://typewrightstudio.com/api/audit`) | audit API |
+| `TYPEWRIGHT_AUDIT_ENDPOINT` | `https://typewrightstudio.com/api/audit` | audit API |
 | `TYPEWRIGHT_AUDIT_INCLUDE_CTA` | `true` | `false` drops the one-line "Start a project" link |
-| `VERCEL_PROTECTION_BYPASS` | unset | only for testing a protected preview deployment |
 
 ## Run locally
 ```

@@ -6,7 +6,7 @@
       "args": ["run", "--with", "mcp>=2,<3", "python", "${CURSOR_PLUGIN_ROOT}/server/typewright_audit_mcp.py"],
       "cwd": "${CURSOR_PLUGIN_ROOT}",
       "env": {
-        "TYPEWRIGHT_AUDIT_ENDPOINT": "https://typewrightstudio-com-git-feature-website-audit-freeborn.vercel.app/api/audit"
+        "TYPEWRIGHT_AUDIT_ENDPOINT": "https://typewrightstudio.com/api/audit"
       }
     }
   }

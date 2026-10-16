@@ -6,7 +6,6 @@ sends a URL to the Typewright audit API and returns the report unchanged.
 Config (environment variables):
   TYPEWRIGHT_AUDIT_ENDPOINT   audit API URL (default: see DEFAULT_ENDPOINT)
   TYPEWRIGHT_AUDIT_INCLUDE_CTA  "false" to drop the one-line call to action
-  VERCEL_PROTECTION_BYPASS    optional, only for testing a protected preview
 """
 import json
 import os
@@ -15,8 +14,7 @@ import urllib.request
 
 from mcp.server.mcpserver import MCPServer
 
-# Preview deployment for now; switch to https://typewrightstudio.com/api/audit at launch.
-DEFAULT_ENDPOINT = "https://typewrightstudio-com-git-feature-website-audit-freeborn.vercel.app/api/audit"
+DEFAULT_ENDPOINT = "https://typewrightstudio.com/api/audit"
 VERSION = "0.1.0"
 TIMEOUT = 75
 
@@ -38,9 +36,6 @@ def endpoint():
 def call_api(url, include_cta):
     body = json.dumps({"url": url, "include_cta": include_cta}).encode()
     headers = {"Content-Type": "application/json", "User-Agent": f"typewright-website-audit-mcp/{VERSION}"}
-    bypass = os.environ.get("VERCEL_PROTECTION_BYPASS", "").strip()
-    if bypass:
-        headers["x-vercel-protection-bypass"] = bypass
     req = urllib.request.Request(endpoint(), data=body, headers=headers, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
