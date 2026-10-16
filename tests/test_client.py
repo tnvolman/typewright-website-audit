@@ -26,7 +26,7 @@ async def main(url):
             text = res.content[0].text
             print(text)
             assert not res.is_error
-            assert "/ 21" in text or text.startswith("Audit failed"), text[:200]
+            assert "/ 20" in text or text.startswith("Audit failed"), text[:200]
 
 
 if __name__ == "__main__":

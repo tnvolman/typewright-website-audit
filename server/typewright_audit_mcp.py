@@ -26,7 +26,7 @@ mcp = MCPServer(
     version=VERSION,
     instructions=("Free website audit for small and local businesses by Typewright Studio. "
                   "Call audit_website with a site the user owns or may test. Report the verdicts as returned; "
-                  "do not change them. Score is out of 21; a check that couldn't run counts as not passed."),
+                  "do not change them. Score is out of 20; a check that couldn't run counts as not passed."),
     website_url="https://typewrightstudio.com/audit/",
 )
 
@@ -84,7 +84,7 @@ def render(report):
 
 @mcp.tool(
     title="Audit a business website",
-    description=("Run Typewright's free 21-check audit on a public business website: speed (Google PageSpeed), "
+    description=("Run Typewright's free 20-check audit on a public business website: speed (Google PageSpeed), "
                  "mobile, Google findability, trust and contact, and accessibility basics. Each check has a "
                  "plain-English finding and a cited source. Only audit sites the user owns or may test."),
 )

@@ -1,9 +1,9 @@
 # Typewright Website Audit (MCP plugin)
 
 A free audit for small and local business websites, by Typewright Studio (Michael McClanahan, Wilson, NC).
-It runs 21 checks covering speed (Google PageSpeed Insights), mobile, Google findability, trust and contact, and accessibility basics. Each check comes with a plain-English finding and a cited source (Google, W3C WCAG 2.2, Nielsen Norman Group, Baymard Institute).
+It runs 20 scored checks covering speed (Google PageSpeed Insights), mobile, Google findability, trust and contact, and accessibility basics. Each check comes with a plain-English finding and a cited source (Google, W3C WCAG 2.2, Nielsen Norman Group, Baymard Institute).
 
-The score is always out of 21. A check that couldn't run counts as not passed, and the report says why.
+The score is always out of 20. A check that couldn't run counts as not passed, and the report says why.
 
 ## What's inside
 - `server/typewright_audit_mcp.py`: an MCP server built on the official MCP Python SDK (v2) with stdio transport. It has one tool, `audit_website(url)`.
