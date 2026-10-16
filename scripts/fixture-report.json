@@ -1,0 +1,106 @@
+{
+  "url": "https://example.com/",
+  "final_url": "https://www.example.com/",
+  "score": 14,
+  "passed": 14,
+  "total": 20,
+  "couldnt": 1,
+  "couldnt_check": 1,
+  "js_heavy": false,
+  "speed_source": "pagespeed",
+  "groups": [
+    {
+      "name": "Speed",
+      "soft": false,
+      "ids": ["speed_score"]
+    },
+    {
+      "name": "Trust & Contact",
+      "soft": false,
+      "ids": ["https", "contact_visible"]
+    },
+    {
+      "name": "Extra notes (not scored)",
+      "soft": true,
+      "ids": ["reflow"]
+    }
+  ],
+  "checks": [
+    {
+      "id": "speed_score",
+      "label": "Mobile speed score",
+      "verdict": "pass",
+      "finding": "Google's mobile performance score is 90/100. That's in the 'Good' band (90–100).",
+      "source": "S2",
+      "citations": [
+        {
+          "name": "Chrome for Developers: Lighthouse performance scoring",
+          "url": "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring"
+        }
+      ]
+    },
+    {
+      "id": "https",
+      "label": "Secure connection (HTTPS)",
+      "verdict": "needs_work",
+      "finding": "The page is served over http, not https.",
+      "source": "S8",
+      "citations": [
+        {
+          "name": "Chrome for Developers: Lighthouse HTTPS audit",
+          "url": "https://developer.chrome.com/docs/lighthouse/best-practices/is-on-https"
+        }
+      ]
+    },
+    {
+      "id": "contact_visible",
+      "label": "Contact is easy to find",
+      "verdict": "couldnt_check",
+      "finding": "We couldn't check this because the page didn't include enough HTML.",
+      "source": "S10",
+      "citations": [
+        {
+          "name": "Nielsen Norman Group: Trustworthiness in Web Design (2016)",
+          "url": "https://www.nngroup.com/articles/trustworthy-design/"
+        }
+      ]
+    },
+    {
+      "id": "reflow",
+      "label": "No sideways scrolling on a small phone",
+      "verdict": "info",
+      "finding": "Not scored. Checking for sideways scrolling at a 320 px-wide screen needs a full browser test that this free audit doesn't run yet.",
+      "source": "S3",
+      "citations": [
+        {
+          "name": "W3C: Web Content Accessibility Guidelines (WCAG) 2.2",
+          "url": "https://www.w3.org/TR/WCAG22/"
+        }
+      ]
+    }
+  ],
+  "citations": {
+    "S2": {
+      "name": "Chrome for Developers: Lighthouse performance scoring",
+      "url": "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring"
+    },
+    "S3": {
+      "name": "W3C: Web Content Accessibility Guidelines (WCAG) 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/"
+    },
+    "S8": {
+      "name": "Chrome for Developers: Lighthouse HTTPS audit",
+      "url": "https://developer.chrome.com/docs/lighthouse/best-practices/is-on-https"
+    },
+    "S10": {
+      "name": "Nielsen Norman Group: Trustworthiness in Web Design (2016)",
+      "url": "https://www.nngroup.com/articles/trustworthy-design/"
+    }
+  },
+  "disclaimer": "Automated check of one page and a few linked pages; not a full review. Thresholds marked as Typewright heuristics are our own rule of thumb, not a published standard.",
+  "scoring": "Score is out of 20. A check we couldn't run counts as not passed.",
+  "cta": {
+    "text": "Want help fixing these? Start a project",
+    "url": "https://typewrightstudio.com/#contact"
+  }
+}
