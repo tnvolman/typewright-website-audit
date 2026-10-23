@@ -19,6 +19,42 @@ Cursor loads `.cursor-plugin/plugin.json` and starts the server from `mcp.json`:
 
 No packages to install.
 
+## Install from the MCP Registry
+
+This repo ships `server.json` for the [official MCP Registry](https://registry.modelcontextprotocol.io/). The package is an MCP Bundle (`.mcpb`) attached to the [v0.1.0 GitHub release](https://github.com/tnvolman/typewright-website-audit/releases/tag/v0.1.0).
+
+1. Install a client that supports registry installs (for example Claude Desktop with MCP registry support).
+2. Search for `io.github.tnvolman/typewright-website-audit` or install from the registry UI after the maintainer publishes `server.json` with `mcp-publisher`.
+3. The client downloads `typewright-website-audit.mcpb`, verifies the SHA-256 in `server.json`, and runs the bundled Node stdio server.
+
+**Runtime:** Node.js **18+** on your machine (zero npm dependencies inside the bundle).
+
+## Install from Smithery
+
+Smithery distributes the same `.mcpb` for local stdio use. Repo metadata lives in `smithery.yaml` (`target: local`).
+
+1. Sign in at [smithery.ai](https://smithery.ai) with GitHub.
+2. After the maintainer publishes the bundle: `smithery mcp publish ./typewright-website-audit.mcpb -n tnvolman/typewright-website-audit` (or install from the Smithery catalog once listed).
+3. Configure optional settings in the Smithery UI if offered (for example the project CTA toggle).
+
+See [Smithery publish docs](https://smithery.ai/docs/build/publish).
+
+## Direct `.mcpb` install
+
+For any MCPB-capable host (Claude Desktop, Claude Code, and others):
+
+1. Download [`typewright-website-audit.mcpb`](https://github.com/tnvolman/typewright-website-audit/releases/download/v0.1.0/typewright-website-audit.mcpb) from the v0.1.0 release.
+2. Verify integrity (optional): `openssl dgst -sha256 typewright-website-audit.mcpb` should match `fileSha256` in `server.json`.
+3. Open or import the `.mcpb` in your client, or double-click it in Claude Desktop.
+
+To rebuild the bundle from source:
+
+```bash
+./scripts/build-mcpb.sh
+```
+
+That runs `mcpb validate` on `mcpb/manifest.json`, then `mcpb pack` into `typewright-website-audit.mcpb`.
+
 ## What's inside
 
 | Path | Purpose |
@@ -30,6 +66,9 @@ No packages to install.
 | `SPEC.md` | JSON shape the tool accepts. |
 | `PRIVACY.md` | What leaves the machine. |
 | `mcp.json`, `.cursor-plugin/plugin.json` | Plugin manifest. |
+| `server.json` | MCP Registry metadata (MCPB package on GitHub Releases). |
+| `smithery.yaml` | Smithery local (stdio MCPB) server id. |
+| `mcpb/manifest.json` | MCPB bundle manifest; built with `scripts/build-mcpb.sh`. |
 | `assets/icon.svg` | Logo. |
 
 The tool POSTs `{"url","source":"plugin","include_cta"}` to `{endpoint}?source=plugin`.

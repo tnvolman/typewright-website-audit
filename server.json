@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.tnvolman/typewright-website-audit",
+  "title": "Typewright Website Audit",
+  "description": "Free small-business website audit: speed, mobile, findability, trust and accessibility checks.",
+  "repository": {
+    "url": "https://github.com/tnvolman/typewright-website-audit",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://typewrightstudio.com/audit/",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/tnvolman/typewright-website-audit/main/assets/icon-128.png",
+      "mimeType": "image/png",
+      "sizes": ["128x128"]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "registryBaseUrl": "https://github.com",
+      "identifier": "https://github.com/tnvolman/typewright-website-audit/releases/download/v0.1.0/typewright-website-audit.mcpb",
+      "version": "0.1.0",
+      "fileSha256": "d6082b0a428f2158a43ba8d27d702548929d3e3416443d10fd50d801c27aecf5",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "TYPEWRIGHT_AUDIT_ENDPOINT",
+          "value": "https://typewrightstudio.com/api/audit"
+        },
+        {
+          "name": "TYPEWRIGHT_AUDIT_INCLUDE_CTA",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}

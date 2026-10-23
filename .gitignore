@@ -1,3 +1,5 @@
 .venv/
 __pycache__/
 *.pyc
+mcpb/staging/
+typewright-website-audit.mcpb
