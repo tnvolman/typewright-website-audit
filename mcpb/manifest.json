@@ -1,0 +1,63 @@
+{
+  "manifest_version": "0.3",
+  "name": "typewright-website-audit",
+  "display_name": "Typewright Website Audit",
+  "version": "0.1.0",
+  "description": "Free small-business website audit: speed, mobile, findability, trust, and accessibility checks.",
+  "long_description": "One MCP tool, `audit_website`, runs Typewright Studio's scored checks on a business homepage. Results include speed (Google PageSpeed), mobile, Google findability, trust and contact, and accessibility basics, each with a cited source. Free, no API key. The URL you submit is sent to typewrightstudio.com and Google PageSpeed; neither the URL nor the results are stored.",
+  "author": {
+    "name": "Michael McClanahan",
+    "email": "hello@typewrightstudio.com",
+    "url": "https://typewrightstudio.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tnvolman/typewright-website-audit.git"
+  },
+  "homepage": "https://typewrightstudio.com/audit/",
+  "documentation": "https://github.com/tnvolman/typewright-website-audit/blob/main/README.md",
+  "support": "https://github.com/tnvolman/typewright-website-audit/issues",
+  "icon": "assets/icon-128.png",
+  "license": "MIT",
+  "keywords": [
+    "website-audit",
+    "small-business",
+    "local-seo",
+    "pagespeed",
+    "accessibility"
+  ],
+  "privacy_policies": ["https://typewrightstudio.com/privacy/"],
+  "tools": [
+    {
+      "name": "audit_website",
+      "description": "Run Typewright Studio's website audit on a business homepage URL."
+    }
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "server/audit-mcp.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/audit-mcp.js"],
+      "env": {
+        "TYPEWRIGHT_AUDIT_ENDPOINT": "https://typewrightstudio.com/api/audit",
+        "TYPEWRIGHT_AUDIT_INCLUDE_CTA": "${user_config.include_cta}"
+      }
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "user_config": {
+    "include_cta": {
+      "type": "boolean",
+      "title": "Include project CTA",
+      "description": "When true, successful audits may include a one-line Typewright Studio project link in the report.",
+      "default": true,
+      "required": false
+    }
+  }
+}

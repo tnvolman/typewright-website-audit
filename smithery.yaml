@@ -1,0 +1,10 @@
+# Smithery (https://smithery.ai) — local stdio MCPB distribution.
+#
+# Publish the release artifact (do not commit the .mcpb binary to git):
+#   ./scripts/build-mcpb.sh
+#   smithery auth login
+#   smithery mcp publish ./typewright-website-audit.mcpb -n tnvolman/typewright-website-audit
+#
+# See: https://smithery.ai/docs/build/publish
+name: typewright-website-audit
+target: local
