@@ -22,7 +22,7 @@
       "registryBaseUrl": "https://github.com",
       "identifier": "https://github.com/tnvolman/typewright-website-audit/releases/download/v0.1.0/typewright-website-audit.mcpb",
       "version": "0.1.0",
-      "fileSha256": "d6082b0a428f2158a43ba8d27d702548929d3e3416443d10fd50d801c27aecf5",
+      "fileSha256": "7ee9400daf9e836f01ba7d6a74d1a1280946d1a4828d5eca1dc6c1628803740b",
       "transport": {
         "type": "stdio"
       },
