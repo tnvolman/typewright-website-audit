@@ -64,7 +64,7 @@ function checkManifest() {
   assert(manifest.name === "typewright-website-audit", "plugin name");
   assert(manifest.displayName === "Typewright Website Audit", "displayName");
   assert(manifest.license === "MIT", "license");
-  assert(manifest.author && manifest.author.name === "Michael McClanahan", "author name");
+  assert(manifest.author && manifest.author.name === "Michael McClanahan (@tnvolman)", "author name");
   assert(manifest.author.email === "hello@typewrightstudio.com", "author email");
   assert(!Object.prototype.hasOwnProperty.call(manifest, "publisher"), "publisher is not a manifest field");
   assert(!Object.prototype.hasOwnProperty.call(manifest, "tags"), "tags is not a manifest field");
