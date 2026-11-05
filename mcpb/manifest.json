@@ -6,7 +6,7 @@
   "description": "Free small-business website audit: speed, mobile, findability, trust, and accessibility checks.",
   "long_description": "One MCP tool, `audit_website`, runs Typewright Studio's scored checks on a business homepage. Results include speed (Google PageSpeed), mobile, Google findability, trust and contact, and accessibility basics, each with a cited source. Free, no API key. The URL you submit is sent to typewrightstudio.com and Google PageSpeed; neither the URL nor the results are stored.",
   "author": {
-    "name": "Michael McClanahan",
+    "name": "Michael McClanahan (@tnvolman)",
     "email": "hello@typewrightstudio.com",
     "url": "https://typewrightstudio.com/"
   },
